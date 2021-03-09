@@ -16,15 +16,15 @@ const mutations = {
 		console.log(state.userNoteList)
 	},
 	ADD_NOTE:(state, noteData) => {
-		state.noteList.unshift(noteData)
+		state.userNoteList.unshift(noteData)
 	},
-	DELETE_NOTE:(state,id) => { 
-		state.noteList = state.noteList.filter(note => note._id !== id)
+	DELETE_NOTE:(state,id) => {
+		state.userNoteList = state.userNoteList.filter(note => note._id !== id)
 	},
 	UPDATE_NOTE :(state,changedData) => {
-		const index = state.noteList.findIndex(note => note._id === changedData._id);
+		const index = state.userNoteList.findIndex(note => note._id === changedData._id);
         if(index !== -1) {
-            state.noteList.splice(index, 1, changedData)
+            state.userNoteList.splice(index, 1, changedData)
         }
 	}
 }
