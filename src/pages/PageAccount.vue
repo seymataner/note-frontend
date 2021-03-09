@@ -17,6 +17,8 @@
         binary-state-sort
 		:no-data-label="emptyData"
 		:no-results-label="notFoundData"
+		:pagination.sync="pagination"
+		:rows-per-page-label ="recordPerPage"
 		
       >
         <template v-slot:top-right>
@@ -111,6 +113,15 @@ export default {
       title: null,
       description: null,
 	  _id: null,
+		pagination: {
+        sortBy: 'desc',
+        descending: false,
+        page: 1,
+        rowsPerPage: 7,
+
+
+        // rowsNumber: xx if getting data from a server
+      },
     };
   },
   components: { Note, AddNote },
@@ -197,6 +208,9 @@ export default {
 	  },
 	  notFoundData(){
 		  return this.$t('notFoundData')
+	  },
+	  recordPerPage () {
+		  return this.$t('recordPerPage')
 	  }
   },
   created() {

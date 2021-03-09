@@ -29,7 +29,9 @@ export default {
 	search: "Ara",
 	changeNote: "Not Güncelle",
 	emptyData: "Herhangi bir veri yok",
-	notFoundData: "İstenilen veri bulunamadı"
+	notFoundData: "İstenilen veri bulunamadı",
+	recordPerPage: "Sayfa başına kayıt: "	
+
 
 	
 

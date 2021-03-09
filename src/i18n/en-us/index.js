@@ -28,7 +28,8 @@ export default {
 	search: "Search",
 	changeNote: "Change Note",
 	emptyData: "I didn't find anything for you",
-	notFoundData: "The filter didn't uncover any results"
+	notFoundData: "The filter didn't uncover any results",
+	recordPerPage:"Records per page: "
 
 
 }

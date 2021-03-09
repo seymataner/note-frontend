@@ -11,7 +11,8 @@
         :filter="filter"
         bordered
         :no-data-label="emptyData"
-		:no-results-label="notFoundData"
+        :no-results-label="notFoundData"
+        :rows-per-page-label="recordPerPage"
       >
         <template v-slot:top-right>
           <q-input
@@ -76,6 +77,9 @@ export default {
     },
     notFoundData() {
       return this.$t("notFoundData");
+    },
+    recordPerPage() {
+      return this.$t("recordPerPage");
     },
   },
   created() {
