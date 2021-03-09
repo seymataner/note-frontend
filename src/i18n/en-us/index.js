@@ -1,0 +1,32 @@
+export default {
+ 	TITLE: "TITLE",
+	DESCRIPTION :"DESCRIPTION",
+	Description: "Description",
+	Note:"Note",
+	User: "User",
+	Account: "Account",
+	CREATE: "CREATE",
+	USERNAME: "USERNAME",
+	EMAIL:"EMAIL",
+	Username:"Username",
+	Password:"Password",
+	Register: "Register",
+	notRegistered : "Not registered? ",
+	createAccount: "Created an account",
+	toggledPassword : "Password with toggle",
+	Login : "Login",
+	emailAddress: "Email Adress",
+	haveAccount : "Have an acoount? ",
+	signIn :"Sign in",
+	Register:"Register",
+	loginPage: "Login Form",
+	registerPage: "Register Form",
+	AddNote :"Add Note",
+	AddNewNote: "Add New Note",
+	cancel: 'Cancel',
+	title: "Title",
+	search: "Search",
+	changeNote: "Change Note"
+
+
+}
