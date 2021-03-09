@@ -6,12 +6,13 @@
           grid
           card-class="bg-accent"
           class="my-sticky-header-column-table"
-          
           :data="noteList"
           :columns="getColumns"
           row-key="_id"
           :filter="filter"
           bordered
+          :no-data-label="emptyData"
+		  :no-results-label="notFoundData"
         >
           <template v-slot:top-right>
             <q-input
@@ -46,8 +47,8 @@ export default {
 
   computed: {
     ...mapGetters("notes", ["noteList"]),
-		 	getColumns() {
-		return [
+    getColumns() {
+      return [
         {
           name: "title",
           required: true,
@@ -63,17 +64,21 @@ export default {
           field: "description",
           sortable: true,
         },
-
-		];
-	},
-	  searchLabel() {
-	  return this.$t('search')
-  }
+      ];
+    },
+    searchLabel() {
+      return this.$t("search");
+    },
+    emptyData() {
+      return this.$t("emptyData");
+    },
+    notFoundData() {
+      return this.$t("notFoundData");
+    },
   },
   created() {
-    this.fetchUserNotes(localStorage.getItem("user-current"))
+    this.fetchUserNotes(localStorage.getItem("user-current"));
   },
-
 };
 </script>
 

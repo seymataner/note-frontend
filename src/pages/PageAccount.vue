@@ -15,6 +15,8 @@
         :filter="filter"
         bordered
         binary-state-sort
+		:no-data-label="emptyData"
+		:no-results-label="notFoundData"
 		
       >
         <template v-slot:top-right>
@@ -189,6 +191,12 @@ export default {
 	  },
 	  changeNote() {
 		  return this.$t('changeNote')
+	  },
+	  emptyData () {
+		  return this.$t('emptyData')
+	  },
+	  notFoundData(){
+		  return this.$t('notFoundData')
 	  }
   },
   created() {

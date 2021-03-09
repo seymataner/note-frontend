@@ -27,7 +27,10 @@ export default {
 	cancel: "Vazgeç",
 	title: "Konu",
 	search: "Ara",
-	changeNote: "Not Güncelle"
+	changeNote: "Not Güncelle",
+	emptyData: "Herhangi bir veri yok",
+	notFoundData: "İstenilen veri bulunamadı"
+
 	
 
 }

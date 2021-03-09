@@ -10,9 +10,16 @@
         @row-click="rowclick"
         :filter="filter"
         bordered
+        :no-data-label="emptyData"
+		:no-results-label="notFoundData"
       >
         <template v-slot:top-right>
-          <q-input border debounce="400" v-model="filter" :placeholder="searchLabel">
+          <q-input
+            border
+            debounce="400"
+            v-model="filter"
+            :placeholder="searchLabel"
+          >
             <template v-slot:append>
               <q-icon name="search" />
             </template>
@@ -67,6 +74,12 @@ export default {
     },
     searchLabel() {
       return this.$t("search");
+    },
+    emptyData() {
+      return this.$t("emptyData");
+    },
+    notFoundData() {
+      return this.$t("notFoundData");
     },
   },
   created() {
